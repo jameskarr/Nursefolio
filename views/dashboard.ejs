@@ -1,0 +1,55 @@
+<%- include('partials/header') -%>
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-white py-12">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <p class="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">Welcome to your health credentials.</p>
+      <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Designed to help EMTs, nurses, and anyone working in the medical field. This is your place to organize various documents, keep track of expiration dates, and easily find them when needed.</p>
+    </div>
+
+    <div class="mt-10">
+      <dl class="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
+        <div class="relative">
+          <dt>
+            <div class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-red-600 text-white">
+              <i class="fa-solid fa-syringe"></i>
+            </div>
+            <a href="/shots" class="ml-16 text-lg font-medium leading-6 text-gray-900">Shot Records</a>
+          </dt>
+          <dd class="mt-2 ml-16 text-base text-gray-500">Keep track of your vaccination history</dd>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <div class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-red-600 text-white">
+              <i class="fa-solid fa-id-card"></i>
+            </div>
+            <a href="/license" class="ml-16 text-lg font-medium leading-6 text-gray-900">License / Identification</a>
+          </dt>
+          <dd class="mt-2 ml-16 text-base text-gray-500">Stay on top of your expiration dates for drivers license or state licenses</dd>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <div class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-red-600 text-white">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <a href="/certs" class="ml-16 text-lg font-medium leading-6 text-gray-900">Certifications / CEUs</a>
+          </dt>
+          <dd class="mt-2 ml-16 text-base text-gray-500">Manage your continuing education documents</dd>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <div class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-red-600 text-white">
+              <i class="fa-sharp fa-solid fa-file"></i>
+            </div>
+            <a href="/docs" class="ml-16 text-lg font-medium leading-6 text-gray-900">Cover Letter / Resume</a>
+          </dt>
+          <dd class="mt-2 ml-16 text-base text-gray-500">Store your resume, cover letter, and other pertinent documents here</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>

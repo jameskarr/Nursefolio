@@ -1,0 +1,45 @@
+<%- include('partials/header') -%>
+
+<main class="">
+  <div class="">
+    <section class="">
+      <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+      <div class="alert alert-danger"><%= el.msg %></div>
+      <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+      messages.info.forEach( el => { %>
+      <div class="alert alert-info"><%= el.msg %></div>
+      <% }) %> <% } %>
+
+
+      <form action="/login" method="POST">
+        <div class="padding form-control w-full max-w-xs">
+          <label class="label">
+            <span for="exampleInputEmail1" class="label-text">Email address</span>
+          </label>
+          <input
+            type="email"
+            class="input input-bordered w-full max-w-xs"
+            placeholder="demo@demo.com"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="email"
+          />
+        </div>
+        <div class="padding form-control w-full max-w-xs">
+          <label class="label">
+            <span for="exampleInputPassword1" class="label-text">Password</span>
+          </label>
+          <input
+            type="password"
+            class="input input-bordered w-full max-w-xs"
+            placeholder="demodemo"
+            id="exampleInputPassword1"
+            name="password"
+          />
+        </div>
+        <button type="submit" class="margin flex items-center justify-center rounded-md border border-transparent bg-red-700 px-8 py-3 text-base font-medium text-white hover:bg-red-800 md:py-4 md:px-10 md:text-lg">Submit</button>
+      </form>
+
+    </section>
+  </div>
+</main>

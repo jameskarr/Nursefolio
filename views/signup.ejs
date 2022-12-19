@@ -1,0 +1,54 @@
+<%- include('partials/header') -%>
+    <main class="container">
+        <div class="row justify-content-center">
+            <section class="col-6 mt-5">
+                <% if (locals.messages.errors) { %>
+                    <% messages.errors.forEach( el => { %>
+                        <div class="alert alert-danger"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+                <% if (locals.messages.info) { %>
+                    <% messages.info.forEach( el => { %>
+                        <div class="alert alert-info"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+
+                <form action="/signup" method="POST">
+                    <div class="padding form-control w-full max-w-xs">
+                      <label class="label">
+                        <span for="exampleInputEmail1" class="label-text">Email address</span>
+                      </label>
+                      <input type="email"
+                        class="input input-bordered w-full max-w-xs"
+                        placeholder="Type here"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        name="email">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone.</div>
+                    </div>
+                    <div class="padding form-control w-full max-w-xs">
+                      <label class="label">
+                        <span for="password" class="label-text">Password</span>
+                      </label>
+                      <input type="password"
+                        class="input input-bordered w-full max-w-xs"
+                        placeholder="Type here"
+                        id="password"
+                        name="password">
+                    </div>
+                    <div class="padding form-control w-full max-w-xs">
+                      <label class="label">
+                        <span for="confirmPassword" class="label-text">Confirm Password</span>
+                      </label>
+                      <input type="password"
+                        class="input input-bordered w-full max-w-xs"
+                        placeholder="Type here"
+                        id="confirmPassword"
+                        name="confirmPassword">
+                    </div>
+                    <button type="submit" class="margin flex items-center justify-center rounded-md border border-transparent bg-red-700 px-8 py-3 text-base font-medium text-white hover:bg-red-800 md:py-4 md:px-10 md:text-lg">Submit</button>
+                  </form>
+
+            </section>
+        </div>
+    </main>

@@ -1,0 +1,65 @@
+.header1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logoBorder {
+    width: 8rem;
+}
+
+.logoBorder:hover {
+    box-shadow: 0 0 12px rgba(33,33,33,1); 
+}
+
+.logo {
+    border-radius: 8px;
+}
+
+.logouts {
+    height: 4rem;
+    width: 8rem;
+}
+
+.border-solid {
+    border-color: rgb(54, 108, 217);
+}
+
+.padding {
+    padding: 10px;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.returnedItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    color: rgb(220, 38, 38);
+}
+
+.fa-trash {
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    border: 3px solid rgb(220, 38, 38);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.fa-trash:hover {
+    color: grey;
+}
+
+.btn-primary {
+    color: rgb(199, 210, 254);
+    font-size: 2rem;
+}
