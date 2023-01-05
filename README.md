@@ -3,6 +3,8 @@ Created to aid medical personnel with tracking their personal documents for empl
 
 **Live demo available:** https://securedhealth.cyclic.app/
 
+![alt tag](https://i.ibb.co/tx2dxzT/secured-Health.gif)
+
 ## How It's Made:
 **Tech used:** MongoDB, EJS, Express.js, Node.js, & TailwindCSS
 
