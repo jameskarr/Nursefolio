@@ -9,4 +9,3 @@ router.post("/createDoc", upload.single("file"), docController.createDoc)
 router.delete("/deleteDoc/:id", ensureAuth, docController.deleteDoc)
 
 module.exports = router
-//if this works, slide the docController const to shots.js routes/condense routes.wetaf

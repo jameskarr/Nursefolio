@@ -9,4 +9,3 @@ router.post("/createCert", upload.single("file"), certController.createCert)
 router.delete("/deleteCert/:id", ensureAuth, certController.deleteCert)
 
 module.exports = router
-//if this works, slide the certController const to shots.js routes/condense routes.wetaf

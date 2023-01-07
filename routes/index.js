@@ -1,6 +1,3 @@
-//signup failing MongoError: E11000 duplicate key error collection:
-//implement a DL button next to fa-trash icons
-
 const express = require("express")
 const router = express.Router()
 const authController = require("../controllers/auth")

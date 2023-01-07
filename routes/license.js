@@ -9,4 +9,3 @@ router.post("/createLicense", upload.single("file"), licenseController.createLic
 router.delete("/deleteLicense/:id", ensureAuth, licenseController.deleteLicense)
 
 module.exports = router
-//if this works, slide the licenseController const to shots.js routes/condense routes.wetaf
