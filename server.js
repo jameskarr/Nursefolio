@@ -9,32 +9,32 @@ const flash = require("express-flash")
 const logger = require("morgan")
 const connectDB = require("./config/database")
 
-//Use .env file in config folder
+//use .env file in config folder
 require("dotenv").config({ path: "./config/.env" })
 
-// Passport config
+//passport config
 require("./config/passport")(passport)
 
-//Connect To Database
+//connect To database
 connectDB()
 
-//Using EJS for views
+//using EJS for views
 app.set("view engine", "ejs")
 
-//Static Folder
+//static folder
 app.use(express.static("public"))
 
-//Body Parsing
+//body parsing
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-//Logging
+//logging
 app.use(logger("dev"))
 
-//Use forms for put / delete
+//use forms for put / delete
 app.use(methodOverride("_method"))
 
-// Setup Sessions - stored in MongoDB
+//setup sessions - stored in MongoDB
 app.use(
   session({
     secret: "keyboard cat",
@@ -44,21 +44,21 @@ app.use(
   })
 )
 
-// Passport middleware
+//passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
 
-//Use flash messages for errors, info, ect...
+//use flash messages for errors, info, ect...
 app.use(flash())
 
-//Setup Routes For Which The Server Is Listening
+//setup routes for which the server is listening
 app.use("/", require("./routes/index"))
 app.use("/shots", require("./routes/shots"))
 app.use("/license", require("./routes/license"))
 app.use("/certs", require("./routes/certs"))
 app.use("/docs", require("./routes/docs"))
 
-//Server Running
+//server running
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!")
 })
