@@ -1,3 +1,9 @@
+//use .env file in config folder
+require("dotenv").config({ path: "./config/.env" })
+
+//passport config
+require("./config/passport")(passport)
+
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
@@ -8,12 +14,6 @@ const methodOverride = require("method-override")
 const flash = require("express-flash")
 const logger = require("morgan")
 const connectDB = require("./config/database")
-
-//use .env file in config folder
-require("dotenv").config({ path: "./config/.env" })
-
-//passport config
-require("./config/passport")(passport)
 
 //connect To database
 connectDB()
@@ -37,7 +37,7 @@ app.use(methodOverride("_method"))
 //setup sessions - stored in MongoDB
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: "not so secret",
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
@@ -48,7 +48,7 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
-//use flash messages for errors, info, ect...
+//use flash messages for user errors, info, ect...
 app.use(flash())
 
 //setup routes for which the server is listening
