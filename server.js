@@ -9,16 +9,16 @@ const flash = require("express-flash")
 const logger = require("morgan")
 const connectDB = require("./config/database")
 
-//use .env file in config folder
+//uses .env file in config folder
 require("dotenv").config({ path: "./config/.env" })
 
-//passport config
+//uses passport config
 require("./config/passport")(passport)
 
-//connect To database
+//connects mongoDB
 connectDB()
 
-//using EJS for views
+//uses EJS for views
 app.set("view engine", "ejs")
 
 //static folder
