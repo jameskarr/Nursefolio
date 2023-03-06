@@ -1,9 +1,3 @@
-//uses .env file in config folder
-require("dotenv").config({ path: "./config/.env" })
-
-//passport config
-require("./config/passport")(passport)
-
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
@@ -14,6 +8,12 @@ const methodOverride = require("method-override")
 const flash = require("express-flash")
 const logger = require("morgan")
 const connectDB = require("./config/database")
+
+//uses .env file in config folder
+require("dotenv").config({ path: "./config/.env" })
+
+//passport config
+require("./config/passport")(passport)
 
 //connects mongoDB
 connectDB()
