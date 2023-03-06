@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const upload = require("../middleware/multer")
 const docController = require("../controllers/doc")
-const { ensureAuth, ensureGuest } = require("../middleware/auth")
+const { ensureAuth } = require("../middleware/auth")
 
 router.get("/", ensureAuth, docController.getDocPage)
 router.post("/createDoc", upload.single("file"), docController.createDoc)

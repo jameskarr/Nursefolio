@@ -36,5 +36,5 @@ module.exports = {
         }   catch (err) {
             res.redirect("/shots")
         }
-    },      
+    }
 }
