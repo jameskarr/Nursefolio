@@ -1,4 +1,4 @@
-const express = require("express")
+const express = require("express") //handles crud requests. http methods (get post put delete)
 const app = express()
 const mongoose = require("mongoose")
 const passport = require("passport")
