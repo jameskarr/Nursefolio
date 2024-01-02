@@ -1,7 +1,7 @@
 # Nursefolio
 An app requested by medical personnel to improve inefficiencies in storing their personal documents for employers. Leveraging a NoSQL database, the software is designed to organize inoculation records, licenses, and certifications for the user to retrieve at any time. A user login experience was added to allow for scalability.
 
-**Live demo available:** https://securedhealth.cyclic.app/
+**Link to project:** https://securedhealth.cyclic.app/
 
 ![alt tag](https://i.ibb.co/tx2dxzT/secured-Health.gif)
 
