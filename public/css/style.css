@@ -1,3 +1,7 @@
+.body {
+
+}
+
 .logoBorder {
     width: 8rem;
 }
@@ -21,6 +25,11 @@
 
 .padding {
     padding: 10px;
+}
+
+.headerMargin {
+    margin: 0 10%;
+    background: white;
 }
 
 .margin {

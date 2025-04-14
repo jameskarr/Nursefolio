@@ -1,4 +1,5 @@
-const express = require("express") //handles crud requests. http methods (get post put delete)
+//npm start
+const express = require("express") //crud http methods (get post put delete)
 const app = express()
 const mongoose = require("mongoose")
 const passport = require("passport")
@@ -15,7 +16,7 @@ require("dotenv").config({ path: "./config/.env" })
 //passport config
 require("./config/passport")(passport)
 
-//connects mongoDB
+//MongoDB
 connectDB()
 
 //uses EJS for views
